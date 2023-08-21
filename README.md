@@ -185,3 +185,52 @@ public class Car {
 ## 📝 License
 
 This project is [MIT](https://github.com/woowacourse/java-racingcar-precourse/blob/master/LICENSE) licensed.
+
+## 기능 목록
+
+
+<입력 받기 - car name input >  
+GameInput)
+- String으로 자동차 이름 입력받기 (최대 5글자, 쉼표 기준)
+- split 으로 나눠 String[]로 변환,
+
+<검증 - car name validation>
+Validation)[ERROR]로 시작하는 에러 메시지 출력 / 다시 입력
+- car 이름 5글자 초과 확인
+- 중복된 car 이름 확인
+- 공백 확인
+
+GameInput)
+- String[] 타입의 car 이름을 반환
+
+
+<게임 진행 - make playGame>
+RaceGame)
+- 이동 횟수 입력 받기
+  makeCars()
+- list<Car> carsName 만들기
+
+
+Car)
+isCarMove()
+- 랜덤 숫자 뽑기
+- 숫자 판별(4이상 go)
+  go :
+  carMoveForward()
+  - car의 pos 1증가
+    stop :
+  - x
+
+<결과 도출 - check Result>
+outPut)
+- car의 상황(pos)출력
+
+RaceGame)
+carMoveOk()
+- 한 턴에 go가 1번이라도 있다면 , 최대 pos 최신화(MaxPos)
+
+<우승자 출력 - print result>
+- MaxPos와 동일한 pos를 가진 car의 이름을 쉼표 기준으로 String[]에 담기
+- String[]의 크기가 1 이상이라면 쉼표 기준으로 출력
+
+Class : RaceGame , Car , GameInput(예외 발생) , Validation, OutputView , MaxPos
