@@ -23,27 +23,24 @@ public class CarNameValidation {
         }
     }
 
-    public static void isNameSizeValid(String carName) {
+    public static void isNameSizeValid(String carName)throws IllegalArgumentException{
         if(carName.length() > CAR_NAME_MAX_SIZE) throw new IllegalArgumentException(ERR_MSG_CAR_NAME_SIZE_OVER);
         return;
     }
 
-    private static void isDuplicatedName(String carName , HashSet<String> carSet) {
+    private static void isDuplicatedName(String carName , HashSet<String> carSet) throws IllegalArgumentException{
         if(carSet.contains(carName)) throw new IllegalArgumentException(ERR_MSG_CAR_NAME_DUPLICATED);
         carSet.add(carName);
         return;
     }
 
-    public static void isEmptyString(String carName){
+    public static void isEmptyString(String carName)throws IllegalArgumentException{
         if(carName.equals("")) throw new IllegalArgumentException(ERR_MSG_CAR_NAME_EMPTY_STRING);
         return;
     }
 
     public static void isThereWhiteSpace(String carName) {
-        char[] nameArr = carName.toCharArray();
-        for (char c : nameArr) {
-            if(c == ' ') throw new IllegalArgumentException(ERR_MSG_CAR_NAME_WHITE_SPACE);
-        }
+        if(carName.contains(" ")) throw new IllegalArgumentException(ERR_MSG_CAR_NAME_WHITE_SPACE);
         return;
     }
 }
