@@ -5,7 +5,7 @@ import racingcar.Validation.CarNameValidation;
 
 public class GameInput {
 
-    public static String[]  carsNameInput() throws IllegalArgumentException{
+    public static String[]  carsNameInput(){
         String nameStr = Console.readLine();
         String[] carsName = nameStr.split(",");
         if(!CarNameValidation.isValidCarName(carsName)) return null;
