@@ -204,14 +204,15 @@ Validation)[ERROR]로 시작하는 에러 메시지 출력 / 다시 입력
 GameInput)
 - String[] 타입의 car 이름을 반환
 
-
-<게임 진행 - make playGame>
+<검증 - try num validation>
 RaceGame)
 - 이동 횟수 입력 받기
+
+<게임 - list up cars name>
   makeCars()
 - list<Car> carsName 만들기
 
-
+<게임 - car move>
 Car)
 isCarMove()
 - 랜덤 숫자 뽑기
