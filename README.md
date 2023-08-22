@@ -198,7 +198,8 @@ GameInput)
 Validation)[ERROR]로 시작하는 에러 메시지 출력 / 다시 입력
 - car 이름 5글자 초과 확인
 - 중복된 car 이름 확인
-- 공백 확인
+- 공백 없는지 확인
+- 빈 문자열 확인
 
 GameInput)
 - String[] 타입의 car 이름을 반환
