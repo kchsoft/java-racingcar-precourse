@@ -2,6 +2,7 @@ package racingcar.Controller;
 
 import racingcar.Domain.Car;
 import racingcar.Domain.GameInput;
+import racingcar.Service.CarService;
 import racingcar.Service.GameService;
 
 import java.util.List;
@@ -18,7 +19,7 @@ public class RacingCarGame {
         String[] carsName = gameService.userInputCarsName();
         List<Car> carList = gameService.makeCarList(carsName);
         int tryNum = gameService.userInputTryNum();
-
+        gameService.startCarRace(tryNum,carList);
 
     }
 }
