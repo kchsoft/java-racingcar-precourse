@@ -2,6 +2,7 @@ package racingcar.Service;
 
 import racingcar.Domain.Car;
 import racingcar.Domain.GameInput;
+import racingcar.View.OutPutView;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -10,12 +11,6 @@ import static racingcar.Constant.GameGuideMsg.GUIDE_MSG_CAR_NAME_INPUT;
 import static racingcar.Constant.GameGuideMsg.GUIDE_MSG_TRY_NUM_INPUT;
 
 public class GameService {
-
-    final CarService carService;
-
-    public GameService() {
-        this.carService = new CarService();
-    }
 
     public String[] userInputCarsName() {
         String[] carsName = null;
@@ -44,15 +39,16 @@ public class GameService {
     }
 
     public void startCarRace(int tryNum, List<Car> carList) {
+        System.out.println("실행 결과");
         for (int i = 0; i < tryNum; i++) {
             oneRaceCycle(carList);
-            OutPutView.outputResult(carList); // need to implementation
+            OutPutView.printOneRaceCycleResult(carList); // need to implementation
         }
     }
 
-    public void oneRaceCycle(List<Car> carList) {
+    private void oneRaceCycle(List<Car> carList) {
         for (Car car : carList) {
-            if(carService.isCarMoveForward())
+            if(car.isCarMoveForward())
                 car.plusOnePos();
         }
     }
