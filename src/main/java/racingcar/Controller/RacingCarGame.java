@@ -15,6 +15,6 @@ public class RacingCarGame {
         List<Car> carList = gameService.makeCarList(carsName);
         int tryNum = gameService.userInputTryNum();
         gameService.startCarRace(tryNum,carList);
-
+        gameService.pickWinner(carList);
     }
 }

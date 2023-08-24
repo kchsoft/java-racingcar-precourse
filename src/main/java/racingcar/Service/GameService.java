@@ -6,6 +6,7 @@ import racingcar.View.OutPutView;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Stack;
 
 import static racingcar.Constant.GameGuideMsg.GUIDE_MSG_CAR_NAME_INPUT;
 import static racingcar.Constant.GameGuideMsg.GUIDE_MSG_TRY_NUM_INPUT;
@@ -51,5 +52,22 @@ public class GameService {
             if(car.isCarMoveForward())
                 car.plusOnePos();
         }
+    }
+
+    public void pickWinner(List<Car> carList) {
+        int maxPos = - 1;
+        List<String> winnerList = new LinkedList<>();
+
+        for (Car car : carList) {
+            if(car.getPosition() > maxPos)
+                maxPos = car.getPosition();
+        }
+
+        for (Car car : carList) {
+            if(car.getPosition() == maxPos)
+                winnerList.add(car.getName());
+        }
+
+        OutPutView.printWinner(winnerList);
     }
 }
