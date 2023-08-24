@@ -227,12 +227,8 @@ isCarMove()
 outPut)
 - car의 상황(pos)출력
 
-RaceGame)
-carMoveOk()
-- 한 턴에 go가 1번이라도 있다면 , 최대 pos 최신화(MaxPos)
-
 <우승자 출력 - print result>
-- MaxPos와 동일한 pos를 가진 car의 이름을 쉼표 기준으로 String[]에 담기
+- stack을 이용하여 , car의 pos가 가장 높은 car만 선정
 - String[]의 크기가 1 이상이라면 쉼표 기준으로 출력
 
-Class : RaceGame , Car , GameInput(예외 발생) , Validation, OutputView , MaxPos
+Class : RaceGame , Car , GameInput(예외 발생) , Validation, OutputView
