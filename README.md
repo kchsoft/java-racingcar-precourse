@@ -228,7 +228,7 @@ outPut)
 - car의 상황(pos)출력
 
 <우승자 출력 - print result>
-- stack을 이용하여 , car의 pos가 가장 높은 car만 선정
+- list 순회1 -> 가장 큰 pos 찾기 , 순회2 -> 가장  큰 pos와 동일한 car 찾기
 - String[]의 크기가 1 이상이라면 쉼표 기준으로 출력
 
 Class : RaceGame , Car , GameInput(예외 발생) , Validation, OutputView
